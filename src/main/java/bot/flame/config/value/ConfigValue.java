@@ -3,7 +3,8 @@ package bot.flame.config.value;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@Getter @AllArgsConstructor
+@Getter
+@AllArgsConstructor
 public class ConfigValue {
 
     private final String value;

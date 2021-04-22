@@ -2,7 +2,6 @@ package bot.flame.config;
 
 import bot.flame.config.value.ConfigValue;
 import com.google.gson.Gson;
-import com.google.gson.JsonParser;
 import lombok.SneakyThrows;
 
 import java.io.InputStream;
@@ -26,7 +25,7 @@ public class Configuration {
         byte[] bytes = Files.readAllBytes(path);
         Gson gson = new Gson();
         Map<?, ?> map = gson.fromJson(new String(bytes), Map.class);
-        for(Map.Entry<?, ?> entry : map.entrySet()) {
+        for (Map.Entry<?, ?> entry : map.entrySet()) {
             values.put(entry.getKey().toString(), new ConfigValue(entry.getValue().toString()));
         }
     }

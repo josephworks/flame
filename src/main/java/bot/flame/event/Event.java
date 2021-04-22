@@ -1,3 +1,4 @@
 package bot.flame.event;
 
-public abstract class Event {}
+public abstract class Event {
+}

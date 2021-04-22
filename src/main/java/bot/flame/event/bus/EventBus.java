@@ -35,7 +35,7 @@ public class EventBus {
 
     @SneakyThrows
     public void postEvent(Event event) {
-        for(Map.Entry<EventListener, List<Method>> entry : methods.entrySet()) {
+        for (Map.Entry<EventListener, List<Method>> entry : methods.entrySet()) {
             EventListener listener = entry.getKey();
             List<Method> methods = entry.getValue();
             methods.stream().filter(method -> {
