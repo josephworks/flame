@@ -9,4 +9,4 @@
 target/
 
 #Bot configuration
-config.json
+/config.json
