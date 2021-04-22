@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.josephworks</groupId>
+    <groupId>bot.flame</groupId>
     <artifactId>flame</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -16,14 +16,17 @@
         <url>https://github.com/josephworks/flame</url>
         <connection>scm:git:git://github.com/josephworks/flame</connection>
     </scm>
+
     <issueManagement>
         <url>https://github.com/josephworks/flame/issues</url>
         <system>GitHub Issue Tracker</system>
     </issueManagement>
+
     <organization>
         <name>Bot Contest</name>
         <url>https://intent.store</url>
     </organization>
+
     <developers>
         <developer>
             <name>JosephWorks</name>
@@ -46,24 +49,48 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <repositories>
         <repository>
-            <name>JosephWorks-Public</name>
-            <id>josephworks-public</id>
-            <url>http://repo.josephworks.net/repository/maven-public</url>
+            <id>dv8tion</id>
+            <name>m2-dv8tion</name>
+            <url>https://m2.dv8tion.net/releases</url>
         </repository>
     </repositories>
 
     <dependencies>
         <dependency>
-            <groupId>net.dv8tion</groupId>
-            <artifactId>JDA</artifactId>
-            <version>4.2.1_259</version>
+            <groupId>org.atteo.classindex</groupId>
+            <artifactId>classindex</artifactId>
+            <version>3.4</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.18</version>
+            <version>1.18.20</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
+            <version>4.2.1_253</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.6</version>
         </dependency>
     </dependencies>
     

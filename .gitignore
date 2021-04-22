@@ -1,0 +1,12 @@
+#IDE specific files
+
+.idea/
+
+*.class
+*.iml
+
+#Build output
+target/
+
+#Bot configuration
+config.json
